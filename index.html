@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT Support Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <h1>💻 IT Support Tool</h1>
+    <p class="author">by Aulia Syahri Pahleza</p>
+
+    <!-- Search -->
+    <input type="text" id="search" placeholder="🔍 Cari masalah..." onkeyup="filterMasalah()">
+
+    <!-- Kategori -->
+    <select id="category" onchange="filterCategory()">
+      <option value="all">Semua Kategori</option>
+      <option value="network">Network</option>
+      <option value="hardware">Hardware</option>
+      <option value="software">Software</option>
+      <option value="system">System</option>
+      <option value="security">Security</option>
+    </select>
+
+    <!-- Masalah -->
+    <select id="problem"></select>
+
+    <button onclick="diagnosa()">🚀 Diagnosa Sekarang</button>
+
+    <!-- Result -->
+    <div id="result" class="result"></div>
+
+    <button onclick="copyResult()" class="copyBtn">📋 Copy Hasil</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
